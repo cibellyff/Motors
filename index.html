@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motors</title>
-    <script src="static/js/jquery-3.7.1.js"></script>
-    <link rel="stylesheet" href="static/css/style.css">
+    <title>Python Motors</title>
+    <script src="/Motors/static/js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="/Motors/static/css/style.css">
 </head>
 <body>
+    <div class="interface">
+        <section class="home">
+            <div class="banner">
+                <video autoplay loop muted playsinline>
+                    <source src="static/movie/video1.mp4" type="video/mp4">
+                </video>
+                <div class="navbar">
+                    <img class="logo" src="/Motors/static/img/logo.png" alt="logo python motors">
+                    <ul>
+                        <li><a href="javascript:void(0);" onclick="scrollToSection('home')">Home</a></li>
+                        <li><a href="javascript:void(0);" onclick="scrollToSection('destaques')">Destaques</a></li>
+                        <li><a href="javascript:void(0);" onclick="scrollToSection('comprar')">Comprar</a></li>
+                        <li><a href="javascript:void(0);" onclick="scrollToSection('vender')">Vender</a></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <h1>PYTHON MOTORS</h1>
+                    <div>
+                        <button type="button" onclick="scrollToDestaques()">Entrar</button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function scrollToDestaques() {
+                    const viagensSection = document.getElementById('destaques');
+                    viagensSection.scrollIntoView({ behavior: 'smooth' });
+                }
     
+                function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+    
+            const slider = document.querySelector('.container');
+      const radioButtons = document.querySelectorAll('input[type=radio]');
+    
+      let currentIndex = 0;
+    
+      function changeSlide() {
+        radioButtons[currentIndex].checked = true;
+        currentIndex = (currentIndex + 1) % radioButtons.length;
+      }
+    
+      setInterval(changeSlide, 3000);
+            </script>
+        </section>
 </body>
 </html>
