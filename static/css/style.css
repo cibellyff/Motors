@@ -1,3 +1,5 @@
+/* Código css do menu de interface feito pelo Guilherme Eduardo */
+
 * {
     margin: 0;
     padding: 0;
@@ -201,3 +203,5 @@ button:hover {
 html {
     scroll-behavior: smooth;
 }
+
+/* Final do código css */
