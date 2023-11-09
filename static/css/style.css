@@ -1,5 +1,7 @@
 /* Código css do menu de interface feito pelo Guilherme Eduardo */
 
+@import url('https://fonts.cdnfonts.com/css/a4-speed');
+
 * {
     margin: 0;
     padding: 0;
@@ -159,9 +161,9 @@ li a:hover {
 }
 
 .content h1 {
+    font-family: 'A4 SPEED', sans-serif;
     margin-top: 80px;
-    font-size: 90px;
-    font-weight: 800;
+    font-size: 70px;
 }
 
 button {
