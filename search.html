@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Buscar anúncios" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/search.css">
+
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <form method="get" class="filtros">
+            <div class="marcas">
+                <h2>Marcas</h2>
+                <div class="caracteristicas">
+                    <label>
+                        <input type="checkbox" name="Ford">Ford
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Chevrolet">Chevrolet
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Volvo">Volvo
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Audi">Audi
+                    </label>
+                    <label>
+                        <input type="checkbox" name="BMW">BMW
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Tesla">Tesla
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Volswagen">Volswagen
+                    </label>
+                </div>
+            </div>
+            <div class="modelos">
+                <h2>Modelos</h2>
+                <div class="caracteristicas">
+                    <label>
+                        <input type="checkbox" name="Focus">Focus
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Vectra">Vectra
+                    </label>
+                    <label>
+                        <input type="checkbox" name="C300">C300
+                    </label>
+                    <label>
+                        <input type="checkbox" name="A3">A3
+                    </label>
+                    <label>
+                        <input type="checkbox" name="X5">X5
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Model S">Model S
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Gol">Gol
+                    </label>
+                </div>
+            </div>
+            <div class="cores">
+                <h2>Cores</h2>
+                <div class="caracteristicas">
+                    <label>
+                        <input type="checkbox" name="Preto">Preto
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Azul">Azul
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Branco">Branco
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Verde">Verde
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Prata">Prata
+                    </label>
+                </div>
+            </div>
+            <div class="ano">
+                <h2>Ano</h2>
+                <div class="caracteristicas">
+                    <label>
+                        De:
+                        <input type="number" min="1960" max="2023" name="ano_min">
+                    </label>
+                    <label>
+                        Até:
+                        <input type="number" min="1960" max="2023" name="ano_max">
+                    </label>
+                </div>
+            </div>
+            <div class="km">
+                <h2>Quilômetros</h2>
+                <div class="caracteristicas">
+                    <label>
+                        De:
+                        <input type="number" min="0" max="700000" name="km_min">
+                    </label>
+                    <label>
+                        Até:
+                        <input type="number" min="0" max="700000" name="km_max">
+                    </label>
+                </div>
+            </div>
+            <div class="preco">
+                <h2>Preço</h2>
+                <div class="caracteristicas">
+                    <label>
+                        De:
+                        <input type="number" min="0" max="900000" placeholder="R$" name="preco_min">
+                    </label>
+                    <label>
+                        Até:
+                        <input type="number" min="0" max="900000" placeholder="R$" name="preco_max">
+                    </label>
+                </div>
+            </div>
+            <label>
+                <input type="submit" value="Pesquisar">
+            </label>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
