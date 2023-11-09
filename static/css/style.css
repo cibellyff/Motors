@@ -1,5 +1,7 @@
 /* Código css do menu de interface feito pelo Guilherme Eduardo */
 
+@import url('https://fonts.cdnfonts.com/css/a4-speed');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,27 +9,8 @@
     box-sizing: border-box;
 }
 
-.contato {
-    background-color: blue;
-}
-
-.creditos {
-    background-color: yellow;
-}
-
-.footer {
-    background-color: purple;
-}
-
-.interface {
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
-
 section {
     height: 100vh;
-    scroll-snap-align: start;
     display: flex;
     position: sticky;
     top: 0;
@@ -36,14 +19,8 @@ section {
     justify-content: center;
 }
 
-.barra {
-    height: 150px;
-    width: 1700px;
-    border-radius: 15px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.interface {
+    height: 100vh;
 }
 
 .container {
@@ -67,25 +44,6 @@ section {
 
 .input[type=radio] {
     display: none;
-}
-
-.slides {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-
-}
-
-.card {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    cursor: pointer;
-    transition: transform 0.4s ease;
 }
 
 .banner {
@@ -159,9 +117,9 @@ li a:hover {
 }
 
 .content h1 {
+    font-family: 'A4 SPEED', sans-serif;
     margin-top: 80px;
-    font-size: 90px;
-    font-weight: 800;
+    font-size: 70px;
 }
 
 button {
@@ -201,7 +159,30 @@ button:hover {
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: initial;
 }
+
+.destaques {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.destaques h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.destaques p {
+    font-size: 16px;
+}
+
+.destaques .ver-mais {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}   
 
 /* Final do código css */
