@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Motors</title>
     <link href="https://fonts.cdnfonts.com/css/a4-speed" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="static/js/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
- <!-- Menu de interface feito pelo Guilherme Eduardo -->
+    <!-- Menu de interface feito pelo Guilherme Eduardo -->
     <div class="interface">
         <section class="home">
             <div class="banner">
@@ -35,36 +40,37 @@
         </section>
         <section class="destaques" id="destaques">
             <div class="conteudo-destaques">
-              <h2>Destaques</h2>
-              <p>Aqui estão alguns destaques incríveis da Python Motors.</p>
-              <button class="ver-mais" onclick="scrollToComprar()">Ver Mais</button>
+                <h2>Destaques</h2>
+                <p>Aqui estão alguns destaques incríveis da Python Motors.</p>
+                <button class="ver-mais" onclick="scrollToComprar()">Ver Mais</button>
             </div>
-          </section>
-            <script>
-                function scrollToDestaques() {
-                    const viagensSection = document.getElementById('destaques');
-                    viagensSection.scrollIntoView({ behavior: 'smooth' });
-                }
-    
-                function scrollToSection(sectionId) {
+        </section>
+        <script>
+            function scrollToDestaques() {
+                const viagensSection = document.getElementById('destaques');
+                viagensSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function scrollToSection(sectionId) {
                 const section = document.getElementById(sectionId);
                 section.scrollIntoView({ behavior: 'smooth' });
             }
-    
+
             const slider = document.querySelector('.container');
-      const radioButtons = document.querySelectorAll('input[type=radio]');
-    
-      let currentIndex = 0;
-    
-      function changeSlide() {
-        radioButtons[currentIndex].checked = true;
-        currentIndex = (currentIndex + 1) % radioButtons.length;
-      }
-    
-      setInterval(changeSlide, 3000);
+            const radioButtons = document.querySelectorAll('input[type=radio]');
+
+            let currentIndex = 0;
+
+            function changeSlide() {
+                radioButtons[currentIndex].checked = true;
+                currentIndex = (currentIndex + 1) % radioButtons.length;
+            }
+
+            setInterval(changeSlide, 3000);
         </script>
-        
- <!-- Fim do menu de interface -->
+
+        <!-- Fim do menu de interface -->
 
 </body>
+
 </html>
