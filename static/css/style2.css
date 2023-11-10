@@ -1,0 +1,334 @@
+/*
+Código feito por Cauã e alterações feitas por Raissa
+*/
+
+/*
+  Variáveis
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --main-color: #f65d2e;
+    --link-color: #e9e9e9;
+    --text1: #e9e9e9;
+    --highligth-text: #f65d2e;
+    --input-text: #e9e9e9;
+    --white-color: rgb(20, 20, 20);
+    --point-list: #e9e9e9;
+    --line-input: #e9e9e9;
+  }
+  
+  /*
+    Zerar estilos
+  */
+  
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body,
+  html {
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+  }
+  
+  ul,
+  li {
+    margin: 0px;
+    list-style-type: none;
+  }
+  
+  input,
+  button {
+    outline: none !important;
+    border: none;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  /*
+    Utilitários
+  */
+  
+  .text1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--text1);
+    line-height: 1.5;
+  }
+  
+  .text2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--text1);
+    line-height: 1.5;
+  }
+  
+  .margin-bottom-35 {
+    margin-bottom: 35px;
+  }
+  
+  .margin-top-35 {
+    margin-top: 35px;
+  }
+  
+  .margin-bottom-8 {
+    margin-bottom: 8px;
+  }
+  
+  .margin-top-8 {
+    margin-top: 8px;
+  }
+  
+  .margin-left-50 {
+    margin-left: 50px;
+  }
+  
+  /*
+      Login
+    */
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: var(--white-color);
+  }
+  
+  .wrap-login {
+    width: 370px;
+    margin-right: 50px;
+    background: var(--white-color);
+  }
+  
+  /*
+    Navbar
+  */
+  
+  .navbar-2 {
+    width: 90%;
+    padding: -30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-2 {
+    width: 160px;
+    margin-top: -5px;
+  }
+  
+  .navbar-2 ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .navbar-2 ul li a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    padding: 15px;
+  }
+  
+  .navbar-2 li a:hover {
+    background: #f65d2e;
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+  
+  .navbar-2 a:hover {
+    color: black;
+  }
+  
+  /*
+      Formulário
+    */
+  
+  .login-form {
+    width: 100%;
+  }
+  
+  .login-form-title {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--highligth-text);
+    line-height: 1.2;
+    text-align: left;
+  }
+  
+  /*
+    Input
+  */
+  
+  .wrap-input {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid var(--line-input);
+  }
+  
+  .input-form {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500px;
+    font-size: 18px;
+    color: var(--input-text);
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 52px;
+    background: transparent;
+    padding: 0 5px;
+  }
+  
+  .focus-input-form {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-input-form::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: var(--main-color);
+  }
+  
+  .focus-input-form::after {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--text1);
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
+  }
+  
+  .input-form:focus+.focus-input-form::after {
+    top: -20px;
+    font-size: 15px;
+  }
+  
+  .input-form:focus+.focus-input-form::before {
+    width: 100%;
+  }
+  
+  .has-val.input-form+.focus-input-form::after {
+    top: -20px;
+    font-size: 15px;
+  }
+  
+  .has-val.input-form+.focus-input-form::before {
+    width: 100%;
+  }
+  
+  /*
+    Botão
+  */
+  
+  .container-login-form-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login-form-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--white-color);
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: all 0.4s;
+  }
+  
+  .login-form-btn:hover {
+    background-color: var(--text1);
+  }
+  
+  /*
+    Links - Login utils
+  */
+  
+  a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--link-color);
+    margin: 0px;
+    transition: all 0.4s;
+  }
+  
+  a:focus {
+    outline: none !important;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: var(--highligth-text);
+  }
+  
+  /*
+    Login utils
+  */
+  
+  .login-utils {
+    margin-top: 20px;
+  }
+  
+  .login-utils li {
+    position: relative;
+    padding-left: 16px;
+  }
+  
+  .login-utils li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--point-list);
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+  }
