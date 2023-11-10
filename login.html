@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!-- Menu login feito pelo cauã -->
+    <div class="container">
+        <div class="container-login">
+            <div class="navbar-2">
+                <img class="logo-2" src="images/logo.png" alt="logo python motors">
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('home')">Home</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('destaques')">Destaques</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('comprar')">Comprar</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('vender')">Vender</a></li>
+                </ul>
+            </div>
+            <div class="wrap-login">
+                <form class="login-form">
+                    <span class="login-form-title">
+                        Faça o login
+                    </span>
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                        <input class="input-form" type="text" name="email" autocomplete="off">
+                        <span class="focus-input-form" data-placeholder="E-mail"></span>
+                    </div>
+
+                    <div class="wrap-input margin-bottom-35">
+                        <input class="input-form" type="password" name="password">
+                        <span class="focus-input-form" data-placeholder="Senha"></span>
+                    </div>
+
+                    <div class="container-login-form-btn">
+                        <button class="login-form-btn">
+                            Entrar
+                        </button>
+                    </div>
+
+                    <ul class="login-utils">
+                        <li class="margin-bottom-8 margin-top-8">
+                            <span class="text1">
+                                Esqueceu sua
+                            </span>
+
+                            <a href="#" class="text2">
+                                senha?
+                            </a>
+                        </li>
+
+                        <li>
+                            <span class="text1">
+                                Não tem conta?
+                            </span>
+
+                            <a href="#" class="text2">
+                                Criar
+                            </a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <img src="images/Login-rafiki.png" width="300" height="300" class="margin-left-50" />
+        </div>
+    </div>
+
+    <script>
+        let inputs = document.getElementsByClassName('input-form');
+        for (let input of inputs) {
+            input.addEventListener("blur", function () {
+                if (input.value.trim() != "") {
+                    input.classList.add("has-val");
+                } else {
+                    input.classList.remove("has-val");
+                }
+            });
+        }
+    </script>
+<!-- Menu login do cauã -->
+</body>
+
+</html>
