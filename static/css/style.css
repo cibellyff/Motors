@@ -187,4 +187,14 @@ html {
     cursor: pointer;
 }   
 
+.carros_destaques {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-size: 0;
+    width: 600px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
 /* Final do código css */
