@@ -95,17 +95,17 @@ Código feito por Cauã e alterações feitas por Raissa
   
   .container {
     width: 100%;
-    margin: 0 auto;
+    height: 100%;
   }
   
   .container-login {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 0px;
     background: var(--white-color);
   }
   
@@ -114,50 +114,7 @@ Código feito por Cauã e alterações feitas por Raissa
     margin-right: 50px;
     background: var(--white-color);
   }
-  
-  /*
-    Navbar
-  */
-  
-  .navbar-2 {
-    width: 90%;
-    padding: -30px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .logo-2 {
-    width: 160px;
-    margin-top: -5px;
-  }
-  
-  .navbar-2 ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 20px;
-  }
-  
-  .navbar-2 ul li a {
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 400;
-    padding: 15px;
-  }
-  
-  .navbar-2 li a:hover {
-    background: #f65d2e;
-    transition: 0.5s;
-    border-radius: 5px;
-  }
-  
-  .navbar-2 a:hover {
-    color: black;
-  }
-  
+
   /*
       Formulário
     */
