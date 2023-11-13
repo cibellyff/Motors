@@ -24,16 +24,16 @@
                 <div class="navbar">
                     <img class="logo" src="static/img/logo.png" alt="logo python motors">
                     <ul>
-                        <li><a href="javascript:void(0);" onclick="scrollToSection('home')">Home</a></li>
-                        <li><a href="javascript:void(0);" onclick="scrollToSection('destaques')">Destaques</a></li>
-                        <li><a href="javascript:void(0);" onclick="scrollToSection('comprar')">Comprar</a></li>
-                        <li><a href="javascript:void(0);" onclick="scrollToSection('anunciar')">Anunciar</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="destaques.html">Destaques</a></li>
+                        <li><a href="comprar.html">Comprar</a></li>
+                        <li><a href="anunciar.html">Anunciar</a></li>
                     </ul>
                 </div>
                 <div class="content">
                     <h1>PYTHON MOTORS</h1>
                     <div>
-                        <button><a href="login.html">Entrar</a></button>
+                        <button class="login_button"><a href="login.html">Entrar</a></button>
                     </div>
                 </div>
             </div>
@@ -45,31 +45,12 @@
                 <img class="carros_destaques" src="static/img/carro1.png" alt="tcross">
                 <img class="carros_destaques" src="static/img/carro2.png" alt="polo">
                 <img class="carros_destaques" src="static/img/carro3.png" alt="virtus">
-                <button class="ver-mais" onclick="scrollToComprar()">Ver Mais</button>
+                <li><a href="ver_mais.html">Ver mais</a></li>
             </div>
         </section>
         <script>
-            function scrollToDestaques() {
-                const viagensSection = document.getElementById('destaques');
-                viagensSection.scrollIntoView({ behavior: 'smooth' });
+            function redirectToPage(page) {
             }
-
-            function scrollToSection(sectionId) {
-                const section = document.getElementById(sectionId);
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-
-            const slider = document.querySelector('.container');
-            const radioButtons = document.querySelectorAll('input[type=radio]');
-
-            let currentIndex = 0;
-
-            function changeSlide() {
-                radioButtons[currentIndex].checked = true;
-                currentIndex = (currentIndex + 1) % radioButtons.length;
-            }
-
-            setInterval(changeSlide, 3000);
         </script>
 
         <!-- Fim do menu de interface -->
