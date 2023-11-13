@@ -28,7 +28,7 @@
     padding: 15px;
 }
 
-li a:hover {
+.navbar li a:hover {
     background: #f65d2e;
     transition: 0.5s;
     border-radius: 5px;
