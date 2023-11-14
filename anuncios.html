@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anúncios</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/anuncios.css">
+    <!-- <script src="static/js/filtros.js"></script> -->
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <img class="logo" src="static/img/logo.png" alt="logo python motors">
+            <ul>
+                <li><a href="javascript:void(0);" onclick="redirectToPage('home.html')">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="redirectToPage('destaques.html')">Destaques</a></li>
+                <li><a href="javascript:void(0);" onclick="redirectToPage('comprar.html')">Comprar</a></li>
+                <li><a href="javascript:void(0);" onclick="redirectToPage('anunciar.html')">Anunciar</a></li>
+            </ul>
+        </div>
+
+<!-- 
+        <div class="input-wrapper">
+            <label for="filter" class="sr-only">Filter</label>
+            <input id="filter" type="text" placeholder="Filter">
+        </div> -->
+
+        <div class="filtros">
+            <div class="marca">
+                <label for="filter1">Marca
+                    <input id="filter1" type="text">
+                </label>
+            </div>
+
+            <div class="modelo">
+                <label for="filter2">Modelo
+                    <input id="filter2" type="text">
+                </label>
+            </div>
+            <div class="ano">
+                <label for="filter2">Ano
+                    <input id="filter2" type="text">
+                </label>
+            </div>
+            <div class="preco">
+                <label for="filter2">Ano
+                    <input id="filter2" type="text">
+                </label>
+            </div>
+            
+        </div>
+        <ul class="anuncios_box">
+            <li class="anuncio">
+                <img src="static/img/anuncios/image_6.png" alt="">
+                <h2 class="Marca">Volkswagen</h1>
+                <p class="modelo">Gol</p>
+                <p class="ano">2020</p>
+                <p class="preco">R$79800</p>
+            </li>
+
+            <li class="anuncio">
+                <img src="static/img/anuncios/image_6.png" alt="">
+                <h2 class="Marca">FOrd</h1>
+                <p class="modelo">Focus</p>
+                <p class="ano">2010</p>
+                <p class="preco">R$120500</p>
+            </li>
+
+
+            <li class="anuncio">
+                <img src="static/img/anuncios/image_6.png" alt="">
+                <h2 class="Marca">Audi</h1>
+                <p class="modelo">A3</p>
+                <p class="ano">2008</p>
+                <p class="preco">R$90000</p>
+            </li>
+        </ul>
+
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
+</html>
+
+<script src="static/js/filtros.js"></script>
