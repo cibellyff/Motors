@@ -16,10 +16,10 @@
             <div class="navbar">
                 <img class="logo" src="static/img/logo.png" alt="logo python motors">
                 <ul>
-                  <li><a href="javascript:void(0);" onclick="redirectToPage('home.html')">Home</a></li>
-                  <li><a href="javascript:void(0);" onclick="redirectToPage('destaques.html')">Destaques</a></li>
-                  <li><a href="javascript:void(0);" onclick="redirectToPage('comprar.html')">Comprar</a></li>
-                  <li><a href="javascript:void(0);" onclick="redirectToPage('anunciar.html')">Anunciar</a></li>
+                    <li><a href="javascript:void(0);" onclick="redirectToPage('index.html')">Home</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('destaques')">Destaques</a></li>
+                    <li><a href="javascript:void(0);" onclick="redirectToPage('comprar.html')">Comprar</a></li>
+                    <li><a href="javascript:void(0);" onclick="redirectToPage('anunciar.html')">Anunciar</a></li>
                 </ul>
             </div>
             <div class="wrap-login">
@@ -74,6 +74,17 @@
                 } else {
                     input.classList.remove("has-val");
                 }
+            });
+        }
+
+        function redirectToPage(page) {
+                window.location.href = page;
+            }
+
+            function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({
+                behavior: 'smooth'
             });
         }
     </script>
