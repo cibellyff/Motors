@@ -145,3 +145,26 @@ p {
     text-align: center;
     margin-left: 610px;
 }
+
+body {
+    --sb-track-color: #232e33;
+    --sb-thumb-color: #f65d2e;
+    --sb-size: 8px;
+  
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+  }
