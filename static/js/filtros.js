@@ -7,7 +7,27 @@ function filterCards(filters, cards) {
             const title = card.querySelector(`.${filter.cardClass}`);
             const titleText = title.textContent.toLowerCase();
 
-            if (filter.input.value !== '' && !titleText.includes(filter.input.value.toLowerCase())) {
+            // if (filter.cardClass === 'ano') {
+            if (['preco_carro', 'ano_carro', 'km_carro'].includes(filter.cardClass)) {
+            // if (['ano_carro'].includes(filter.cardClass)) {
+                const filterValue = parseInt(filter.input.value, 10);
+                const titleNumber = parseInt(titleText, 10);
+                
+                // window.alert(filter.filterClass)
+
+                // if (filter.filterClass === 'ano_min_filtro' && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber < filterValue) {
+                if (['ano_min_filtro', 'preco_min_filtro', 'km_min_filtro'].includes(filter.filterClass) && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber < filterValue) {
+                    shouldDisplay = false;
+                    break;
+                }
+
+                // if (filter.filterClass === 'ano_max_filtro' && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber > filterValue) {
+                if (['ano_max_filtro', 'preco_max_filtro', 'km_max_filtro'].includes(filter.filterClass) && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber > filterValue) {
+                    shouldDisplay = false;
+                    break;
+                }
+
+            } else if (filter.input.value !== '' && !titleText.includes(filter.input.value.toLowerCase())) {
                 shouldDisplay = false;
                 break;
             }
@@ -26,10 +46,14 @@ function addFilterEventListener(filter, filters) {
 
 // Configuração dos filtros
 const filtersConfig = [
-    { input: document.querySelector('.filtros .marca input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'Marca' },
-    { input: document.querySelector('.filtros .modelo input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'modelo' },
-    { input: document.querySelector('.filtros .ano input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'ano' },
-    { input: document.querySelector('.filtros .preco input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'preco' },
+    { input: document.querySelector('.filtros .marca_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'marca_carro', filterClass: 'marca_filtro' },
+    { input: document.querySelector('.filtros .modelo_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'modelo_carro', filterClass: 'modelo_filtro' },
+    { input: document.querySelector('.filtros .ano_min_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'ano_carro', filterClass: 'ano_min_filtro' },
+    { input: document.querySelector('.filtros .ano_max_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'ano_carro', filterClass: 'ano_max_filtro' },
+    { input: document.querySelector('.filtros .preco_min_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'preco_carro', filterClass: 'preco_min_filtro' },
+    { input: document.querySelector('.filtros .preco_max_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'preco_carro', filterClass: 'preco_max_filtro' },
+    { input: document.querySelector('.filtros .km_min_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'km_carro', filterClass: 'km_min_filtro' },
+    { input: document.querySelector('.filtros .km_max_filtro input'), cards: document.querySelectorAll('.anuncios_box li'), cardClass: 'km_carro', filterClass: 'km_max_filtro' },
 ];
 
 // Adiciona o listener de evento para cada filtro usando a configuração
