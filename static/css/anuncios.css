@@ -78,37 +78,40 @@ html {
 }
 
 .filtros {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
 
 }
 
 .filtros-box {
-  width: 400px;
-  justify-content: center;
-  align-items: center;
+
   margin-bottom: 10px;
   background-color: #b6b6b6;
   border-radius: 5px;
 }
 
-.filtros-box input {
-  width: 300px;
-}
 
 .filtros-box input {
 
-  width: 300px;
+  width: 255px;
   border: 1px solid rgb(126, 126, 126);
   border-radius: 4px;
+  height: 30px;
+  color: var(--highligth-color);
+  font-size: 1em;
+  padding: 2px;
 }
 
-
-.filtros-box label {
-  /* background-color: #f65d2e; */
-  display: flex;
-  padding: 3px;
-  justify-content: space-between;
+.filtros div {
+  margin: 5px;
 }
+
+.filtros .range_min, .filtros .range_max {
+  margin: 0px;
+  display: inline;
+}
+
+.filtro_range input {
+  width: 125px;
+}
+
