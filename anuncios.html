@@ -32,16 +32,33 @@
         <div class="filtros">
             <div class="filtros-box">
 
-                <div class="marca_filtro">
+                <!-- <div class="marca_filtro">
                     <label for="marca_filtro">
                         <input id="marca_filtro" type="text" placeholder="Marca">
                     </label>
+                </div> -->
+                
+                <div class="marca_filtro">
+                    <input placeholder="Marca" type="text" list="opcoes_marca">
+                    <datalist id="opcoes_marca">
+                      <option value="Volkswagen">
+                      <option value="Honda">
+                      <option value="Audi">
+                      <option value="BMW">
+                    </datalist>
                 </div>
 
                 <div class="modelo_filtro">
-                    <label for="modelo_filtro">
-                        <input id="modelo_filtro" type="text" placeholder="Modelo">
-                    </label>
+                    <input placeholder="Modelo" type="text" list="opcoes_modelo">
+                    <datalist id="opcoes_modelo">
+                      <option value="T-Cross">
+                      <option value="Civic">
+                      <option value="A3">
+                      <option value="Polo">
+                      <option value="Virtus">
+                      <option value="X5">
+                    </datalist>
+
                 </div>
 
                 <div class="filtro_ano">
