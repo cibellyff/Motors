@@ -7,21 +7,15 @@ function filterCards(filters, cards) {
             const title = card.querySelector(`.${filter.cardClass}`);
             const titleText = title.textContent.toLowerCase();
 
-            // if (filter.cardClass === 'ano') {
             if (['preco_carro', 'ano_carro', 'km_carro'].includes(filter.cardClass)) {
-            // if (['ano_carro'].includes(filter.cardClass)) {
                 const filterValue = parseInt(filter.input.value, 10);
                 const titleNumber = parseInt(titleText, 10);
-                
-                // window.alert(filter.filterClass)
 
-                // if (filter.filterClass === 'ano_min_filtro' && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber < filterValue) {
                 if (['ano_min_filtro', 'preco_min_filtro', 'km_min_filtro'].includes(filter.filterClass) && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber < filterValue) {
                     shouldDisplay = false;
                     break;
                 }
 
-                // if (filter.filterClass === 'ano_max_filtro' && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber > filterValue) {
                 if (['ano_max_filtro', 'preco_max_filtro', 'km_max_filtro'].includes(filter.filterClass) && !isNaN(filterValue) && !isNaN(titleNumber) && titleNumber > filterValue) {
                     shouldDisplay = false;
                     break;
@@ -60,3 +54,5 @@ const filtersConfig = [
 for (const filterConfig of filtersConfig) {
     addFilterEventListener(filterConfig, filtersConfig);
 }
+
+

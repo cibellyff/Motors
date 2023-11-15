@@ -59,6 +59,7 @@ html {
 .anuncios_box li img {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  width: 240px;
 }
 
 .anuncios_box li h2,
